@@ -34,6 +34,7 @@ io.on("connection", (socket) => {
             updateUser(rooms[roomName]);
         })
 
+<<<<<<< HEAD
         socket.on("restartGame", (data) => {
             const roomName = data.room
             if (!rooms[roomName]) {
@@ -53,6 +54,8 @@ io.on("connection", (socket) => {
             }
         })
 
+=======
+>>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
         socket.on("joinRoom", (roomName) => {
             if (!rooms[roomName]) {
                 // socket.roomName = roomName;
@@ -80,7 +83,11 @@ io.on("connection", (socket) => {
                         room.forEach((p, i) => {
                             p.emit("start");
                         });
+<<<<<<< HEAD
                         new Game(room, socket);
+=======
+                        new Game(room);
+>>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
                         delete rooms[socket.roomName];
                     } else {
                         socket.emit("startError", "Pemain tidak cukup");
