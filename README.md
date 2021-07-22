@@ -1,4 +1,4 @@
-#UNO Recode from : https://github.com/EmangGek/UnoGame
+# UNO Recode from : https://github.com/EmangGek/UnoGame
 
 #### New Features
 * Chat with your friends
@@ -6,4 +6,4 @@
 * Play Again (BUG)
 
 #### Demo 
-https://uno.lapakdigital.repl.co/
+* https://uno.lapakdigital.repl.co/
