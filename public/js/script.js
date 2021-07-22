@@ -10,10 +10,7 @@ const enterName = () => {
         },
     }).then((name) => {
         if (!name || !name.trim()) return enterName();
-<<<<<<< HEAD
          document.querySelector("#username").value = name
-=======
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
         socket.emit("name", name);
         swal.close();
     });
@@ -189,7 +186,6 @@ socket.on("end", (data) => {
         title: "Permainan Berakhir",
         text: data + " memenangkan permainan",
     }).then(() => {
-<<<<<<< HEAD
         swal({
             title: "Play Again?",
             buttons: {
@@ -220,8 +216,6 @@ socket.on("habis", () => {
         title: "Permainan Berakhir",
         text: "Kartu Habis",
     }).then(() => {
-=======
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
         window.location.reload();
     });
 });
@@ -242,7 +236,6 @@ socket.on("msg", (data) => console.log("msg: ", data));
 socket.on("end", (data) => console.log("end: ", data));
 socket.on("updateCardsCount", (data) =>
     console.log("updateCardsCount: ", data)
-<<<<<<< HEAD
 );
 
 const chat = () => {
@@ -306,6 +299,3 @@ function escapeHtml(text) {
 function stripslashes(str) {
     return str.replace(/\\(.)/mg, "$1");
 }
-=======
-);
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba

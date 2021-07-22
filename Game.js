@@ -1,5 +1,4 @@
 class Game {
-<<<<<<< HEAD
     constructor(players, socket) {
        this.socket = socket;
         this.players = players;
@@ -118,17 +117,10 @@ class Game {
         this.chat()
         this.card = [...this.awal]
         this.acak(this.card)
-=======
-    constructor(players) {
-        this.players = players;
-        this.turn = 0;
-        this.reverse = false;
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
         this.shuffle();
         this.updateDiscarded(this.getRandomCard(false));
         this.playerInit();
     }
-<<<<<<< HEAD
     chat() {
         this.players.forEach((p) => {
             p.on("chat", (msg) => {
@@ -152,8 +144,6 @@ class Game {
 
       return array;
     }
-=======
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
 
     emitAllPlayer(e, d) {
         this.players.forEach((p) => {
@@ -185,7 +175,6 @@ class Game {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-<<<<<<< HEAD
     kartu() {
         let cardLength = this.card.length
         if (cardLength === 0) {
@@ -219,17 +208,6 @@ class Game {
         }
         let color = kartu[0]
         let value = kartu[1]
-=======
-    getRandomCard(action = true) {
-        let color = this.random(0, 3);
-        if (!action) {
-            return [color, this.random(0, 9)];
-        }
-        let value = this.random(0, 14);
-        if (value >= 13) {
-            return [null, value];
-        }
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
         return [color, value];
     }
 
@@ -363,8 +341,4 @@ class Game {
     }
 }
 
-<<<<<<< HEAD
 module.exports = Game;
-=======
-module.exports = Game;
->>>>>>> 3ceb6303ab038a37b5304957cfda9f1e0974cdba
